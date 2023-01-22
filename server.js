@@ -29,6 +29,10 @@ app.use((err,req,res,next)=>{
     res.status(500).json({'msg':err})
 })
 
+app.get("/",(req,res)=>{
+    res.send("server running on the PAGE MERN Authentication")
+})
+
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './build', 'index.html'));
 });
